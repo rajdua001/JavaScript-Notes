@@ -32,14 +32,14 @@ class Notebook {
  this.pages.push(page);
 }
 
-print() {
-  for (let page of this.pages) {
-  page.print();
- }
- }
- }
+  print() {
+   for (let page of this.pages) {
+     page.print();
+   }
+  }
+}
  
- var mathNotes = new Notebook();
+var mathNotes = new Notebook();
 mathNotes.addPage("Arithmetic: + - * / ...");
 mathNotes.addPage("Trigonometry: sin cos tan ...");
 
