@@ -6,7 +6,7 @@
 | NOTE: |
 | :--- |
 |==='s checks both the value and type. All value comparisons in JS consider the type 
-of value being compared, not just the === operator. Specifically, === disallows any sort of type converstion (aka, "coercion") in it's comparison, where other JS comparisons do allow coercion."
+of value being compared, not just the === operator. Specifically, === disallows any sort of type converstion (aka, "coercion") in it's comparison, where other JS comparisons do allow coercion."|
 
 ```js
 3 === 3.0;              // true
@@ -20,4 +20,19 @@ true === 1;              // false
 0 === null;              // false
 "" === null;             // false
 null === undefined;      // false
+```
+
+Special Values Comparison:
+
+```js
+  NaN === NaN;           // false
+  0 === -0;              // true
+```
+
+Object Comparison:
+
+```js
+[ 1, 2, 3 ] === [ 1, 2, 3 ];    // false
+{ a: 42 } === { a: 42 }         // false
+(x => x * 2) === (x => x * 2)   // false
 ```
